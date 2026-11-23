@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Kondisi Dunia — pantau cuaca, gempa bumi, kualitas udara, peristiwa alam, dan informasi hutan dari sumber data terbuka.">
+  <title>Kondisi Dunia — Observatorium Alam</title>
+  <link rel="preconnect" href="https://api.open-meteo.com">
+  <link rel="preconnect" href="https://earthquake.usgs.gov">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/earth-hero.webp" type="image/webp">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+  <header class="site-header site-header-dark">
+    <a class="brand" href="index.html" aria-label="Kondisi Dunia, halaman utama">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c4 4 6 8 6 12s-2 8-6 12M16 4c-4 4-6 8-6 12s2 8 6 12M7 9h18M7 23h18"/></svg></span>
+      <span class="brand-name">KONDISI<span>DUNIA</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+      <a class="nav-link active" href="index.html">Beranda</a>
+      <a class="nav-link" href="cuaca.html">Cuaca</a>
+      <a class="nav-link" href="gempa.html">Gempa bumi</a>
+      <a class="nav-link" href="udara.html">Kualitas udara</a>
+      <a class="nav-link" href="peristiwa.html">Peristiwa alam</a>
+      <a class="nav-link" href="hutan.html">Hutan</a>
+    </nav>
+    <a class="header-action" href="cuaca.html">Pantau kondisi <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="konten">
+    <section class="hero hero-home">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> OBSERVATORIUM ALAM DIGITAL</p>
+        <h1>Memahami Bumi,<br><span>dimulai dari data.</span></h1>
+        <p class="hero-copy">Satu ruang untuk melihat perubahan cuaca, aktivitas seismik, kualitas udara, dan peristiwa alam yang sedang berlangsung di planet kita.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#jelajahi">Jelajahi data alam <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="gempa.html">Lihat aktivitas gempa <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta"><span class="tiny-line"></span><span>DATA TERBUKA · PEMBARUAN BERKALA</span><span class="hero-meta-separator">/</span><span id="hero-clock">WAKTU LOKAL</span></div>
+      </div>
+      <div class="hero-side-note"><span>01 / 05</span><span class="side-note-line"></span><span>PLANET BUMI</span></div>
+      <div class="hero-caption"><span class="caption-mark"></span><span>HOME / EARTH OBSERVATION</span></div>
+    </section>
+
+    <section class="live-strip" aria-label="Ringkasan data terkini">
+      <div class="wrap live-strip-inner">
+        <div class="live-strip-heading"><span class="status-dot"></span><span>RINGKASAN KONDISI</span><small id="last-updated">Menghubungkan data...</small></div>
+        <div class="live-metric"><span class="metric-label">SUHU LOKASI</span><strong id="home-temp">—</strong><span id="home-location">Majenang, Indonesia</span></div>
+        <div class="live-metric"><span class="metric-label">GEMPA · 24 JAM</span><strong id="home-quakes">—</strong><span id="home-quake-note">Data global USGS</span></div>
+        <div class="live-metric"><span class="metric-label">INDEKS UDARA</span><strong id="home-aqi">—</strong><span id="home-aqi-note">US AQI · perkiraan model</span></div>
+        <a class="strip-link" href="cuaca.html" aria-label="Buka halaman cuaca">Lihat detail <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section section-main" id="jelajahi">
+      <div class="wrap">
+        <div class="section-heading section-heading-split">
+          <div><p class="eyebrow"><span class="eyebrow-number">01</span> JELAJAHI DATA</p><h2>Kenali tanda-tanda<br>perubahan alam.</h2></div>
+          <p class="section-intro">Informasi disajikan melalui sumber terbuka, dengan konteks yang jelas agar angka tidak berdiri sendiri tanpa makna.</p>
+        </div>
+        <div class="feature-grid">
+          <a class="feature-card feature-card-weather" href="cuaca.html">
+            <div class="feature-top"><span class="feature-index">01 / ATMOSFER</span><span class="arrow-circle" aria-hidden="true">↗</span></div>
+            <div class="feature-symbol icon-blue" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 33h21a8 8 0 0 0 .3-16A12 12 0 0 0 12 20a7 7 0 0 0 2 13Z"/><path d="m18 39-2 4m13-4-2 4m-3-7-2 4"/></svg></div>
+            <h3>Cuaca & atmosfer</h3><p>Suhu, kelembapan, angin, peluang hujan, dan perkiraan cuaca beberapa jam ke depan.</p>
+            <div class="feature-bottom"><span>OPEN-METEO</span><span aria-hidden="true">→</span></div>
+          </a>
+          <a class="feature-card feature-card-quake" href="gempa.html">
+            <div class="feature-top"><span class="feature-index">02 / TEKTONIK</span><span class="arrow-circle" aria-hidden="true">↗</span></div>
+            <div class="feature-symbol icon-dark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M4 27h9l5-13 8 24 6-17 4 6h8"/><circle cx="24" cy="24" r="20"/></svg></div>
+            <h3>Aktivitas gempa</h3><p>Jelajahi titik gempa terbaru, kedalaman, magnitudo, serta posisi geografisnya.</p>
+            <div class="feature-bottom"><span>USGS EARTHQUAKE FEED</span><span aria-hidden="true">→</span></div>
+          </a>
+          <a class="feature-card feature-card-air" href="udara.html">
+            <div class="feature-top"><span class="feature-index">03 / KUALITAS UDARA</span><span class="arrow-circle" aria-hidden="true">↗</span></div>
+            <div class="feature-symbol icon-blue" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 17h22a6 6 0 1 0-6-6M5 25h31a5 5 0 1 1-5 5M9 33h14a4 4 0 1 1-4 4"/></svg></div>
+            <h3>Kualitas udara</h3><p>Pantau indeks kualitas udara dan konsentrasi partikel halus sebagai gambaran kondisi atmosfer.</p>
+            <div class="feature-bottom"><span>OPEN-METEO AIR QUALITY</span><span aria-hidden="true">→</span></div>
+          </a>
+          <a class="feature-card feature-card-events" href="peristiwa.html">
+            <div class="feature-image"><img src="assets/earth-hero.webp" alt="Bumi dari orbit dengan awan dan atmosfer biru" loading="lazy"></div>
+            <div class="feature-top"><span class="feature-index">04 / PERISTIWA ALAM</span><span class="arrow-circle" aria-hidden="true">↗</span></div>
+            <h3>Peristiwa alam</h3><p>Daftar peristiwa terpantau seperti kebakaran hutan, badai, banjir, dan longsor dari NASA.</p>
+            <div class="feature-bottom"><span>NASA EONET</span><span aria-hidden="true">→</span></div>
+          </a>
+          <a class="feature-card feature-card-forest" href="hutan.html">
+            <div class="feature-photo" role="img" aria-label="Hutan hijau yang lebat"></div>
+            <div class="feature-top"><span class="feature-index">05 / EKOSISTEM</span><span class="arrow-circle" aria-hidden="true">↗</span></div>
+            <h3>Hutan & tutupan lahan</h3><p>Kenali data deforestasi, tutupan pohon, dan cara membaca informasi pemantauan hutan.</p>
+            <div class="feature-bottom"><span>GLOBAL FOREST WATCH · FAO</span><span aria-hidden="true">→</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark story-section">
+      <div class="wrap story-layout">
+        <div class="story-visual"><img src="assets/earth-hero.webp" alt="Bumi dilihat dari ruang angkasa" loading="lazy"><span class="visual-coordinate">07°17′51″S / 108°45′51″E</span><span class="visual-ring visual-ring-one"></span><span class="visual-ring visual-ring-two"></span></div>
+        <div class="story-copy"><p class="eyebrow eyebrow-light"><span class="eyebrow-number">02</span> CARA MEMBACA DATA</p><h2>Data memberi petunjuk.<br><span>Konteks memberi arti.</span></h2><p>Angka suhu, magnitudo, atau kualitas udara menggambarkan satu bagian dari sistem Bumi. Perhatikan waktu pengukuran, lokasi, sumber data, dan batasan model sebelum menarik kesimpulan.</p><a class="text-link text-link-light" href="sumber-data.html">Pelajari sumber data <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section source-section">
+      <div class="wrap source-row"><div><p class="eyebrow"><span class="eyebrow-number">03</span> TRANSPARANSI</p><h2>Sumber data<br>yang dapat ditelusuri.</h2></div><div class="source-logos"><a href="https://open-meteo.com/" target="_blank" rel="noreferrer"><span class="source-mark source-mark-blue">OM</span><span><strong>Open-Meteo</strong><small>Cuaca & kualitas udara</small></span><b aria-hidden="true">↗</b></a><a href="https://earthquake.usgs.gov/earthquakes/feed/" target="_blank" rel="noreferrer"><span class="source-mark source-mark-dark">US</span><span><strong>USGS</strong><small>Informasi aktivitas gempa</small></span><b aria-hidden="true">↗</b></a><a href="https://eonet.gsfc.nasa.gov/" target="_blank" rel="noreferrer"><span class="source-mark source-mark-blue">N</span><span><strong>NASA EONET</strong><small>Peristiwa alam global</small></span><b aria-hidden="true">↗</b></a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-main"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c4 4 6 8 6 12s-2 8-6 12M16 4c-4 4-6 8-6 12s2 8 6 12M7 9h18M7 23h18"/></svg></span><span class="brand-name">KONDISI<span>DUNIA</span></span></a><p>Ruang pantau kondisi alam berbasis data terbuka.</p><a class="text-link text-link-light" href="sumber-data.html">Sumber & metodologi <span aria-hidden="true">→</span></a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> KONDISI DUNIA</span><span>DATA DAPAT BERUBAH · SELALU PERIKSA SUMBER ASLI</span></div></footer>
+  <script src="js/config.js"></script><script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/app.js"></script>
+</body>
+</html>
